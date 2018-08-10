@@ -1,4 +1,4 @@
-#Antes de instalar o Apache no Raspbian, vamos verificar se existe alguma atualização para o sistema operacional usando os comandos abaixo:
+#Antes de instalar o Apache no Raspbian, verifique se existe alguma atualização para o sistema operacional:
 
 sudo apt-get update
 sudo apt-get upgrade
@@ -24,7 +24,8 @@ sudo apt-get install php5-mysql   #Esse comando não funcionou no Raspbian 09/08
 
 sudo service apache2 restart
 
-#Agora basta acessar o seu Web Server à partir de qualquer browser, digitando o endereço IP do seu Raspberry. Não sabe o endereço IP? Abra o LX TErminal e digite:
+#Agora basta acessar o seu Web Server à partir de qualquer browser, digitando o endereço IP do seu Raspberry. 
+#Não sabe o endereço IP? Abra o LX TErminal e digite:
 
 hostname -I
 
