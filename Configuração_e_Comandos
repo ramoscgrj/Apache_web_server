@@ -1,0 +1,43 @@
+#Antes de instalar o Apache no Raspbian, vamos verificar se existe alguma atualização para o sistema operacional usando os comandos abaixo:
+
+sudo apt-get update
+sudo apt-get upgrade
+
+#Após a atualização, podemos proceder com a instalação do Apache:
+
+sudo apt-get install apache2 -y
+
+#Para instalar o suporte à PHP no Apache Web Server, use o comando abaixo:
+
+sudo apt-get install php libapache2-mod-php -y
+
+#Você também pode instalar o mysql no seu servidor, se quiser trabalhar com banco de dados. Para isso, execute o comando:
+
+sudo apt-get install mysql-server mysql-client php5-mysql
+
+#Você pode tambem executar esses comandos separadamente:
+sudo apt-get install mysql-server
+sudo apt-get install mysql-client
+sudo apt-get install php5-mysql   #Esse comando não funcionou no Raspbian 09/08/2018
+
+#Para validar as alterações, reinicie o Apache com o comando:
+
+sudo service apache2 restart
+
+#Agora basta acessar o seu Web Server à partir de qualquer browser, digitando o endereço IP do seu Raspberry. Não sabe o endereço IP? Abra o LX TErminal e digite:
+
+hostname -I
+
+#Agora sim, com o endereço IP do Raspberry em mãos, abra o browser e acesse a página inicial do Apache Web Server com esse IP
+#Uma página padrão do Apache abrirá informando que está funcionando.
+#Para alterar essa página, acesse o arquivo index.html na pasta /var/www/html. Uma sugestão de editor que você pode usar para criar e 
+#modificar páginas html no próprio Raspberry é o Bluefish. 
+
+#Instale o Bluefish utilizando:
+
+sudo apt-get install bluefish
+
+#Abra o Bluefish através do menu Programming => Bluefish Editor:
+
+Para editar o html padrão do Apache Web Server, vá até a pasta /var/www/html e selecione o arquivo index.html
+
